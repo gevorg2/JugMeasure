@@ -80,5 +80,29 @@ namespace JugMeasure.Core.Test
             var res = jugMeasure.Measure(new Jug(5, "Jug5"), new Jug(5, "Jug3"), new Capacity(4));
             Assert.Null(res);
         }
+
+        [Fact]
+        public void Test5()
+        {
+            var jugMeasure = new JugMeasureService();
+            var res = jugMeasure.Measure(new Jug(6, "Jug5"), new Jug(3, "Jug3"), new Capacity(2));
+            Assert.Null(res);
+        }
+
+        [Fact]
+        public void Test6()
+        {
+            var jugMeasure = new JugMeasureService();
+            var res = jugMeasure.Measure(new Jug(6, "Jug5"), new Jug(2, "Jug3"), new Capacity(3));
+            Assert.Null(res);
+        }
+
+        [Fact]
+        public void Test7()
+        {
+            var jugMeasure = new JugMeasureService();
+            var res = jugMeasure.Measure(new Jug(6, "Jug5"), new Jug(2, "Jug3"), new Capacity(2));
+            Assert.NotNull(res);
+        }
     }
 }

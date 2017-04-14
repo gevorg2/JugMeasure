@@ -13,8 +13,7 @@ namespace JugMeasure.Core
         }
         public MeasureReslut Measure(Jug jug1, Jug jug2, Capacity amount)
         {
-            if (jug1.Capacity == jug2.Capacity && amount != jug1.Capacity)
-                return null;
+            var repeatCount = 0;
             List<JugAction> jugActions = new List<JugAction>();
             while (jug1.FilledCapacity != amount && jug2.FilledCapacity != amount)
             {
@@ -25,6 +24,11 @@ namespace JugMeasure.Core
                     action = new JugAction(jug2, null);
                 else
                     action = new JugAction(jug1, jug2);
+
+                if (jug1.IsFull && jug2.IsEmpty)
+                    repeatCount++;
+                if (repeatCount >= 2)
+                    return null;
                 jugActions.Add(action);
                 var pAction = action.Perform();
                 if (pAction.From != null)
