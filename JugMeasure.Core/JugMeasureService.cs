@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace JugMeasure.Core
 {
-    public class JugMeasure : IJugMeasure
+    public class JugMeasureService : IJugMeasureService
     {
         public MeasureReslut ReverseMeasure(Jug jug1, Jug jug2, Capacity amount)
         {
@@ -11,6 +13,8 @@ namespace JugMeasure.Core
         }
         public MeasureReslut Measure(Jug jug1, Jug jug2, Capacity amount)
         {
+            if (jug1.Capacity == jug2.Capacity && amount != jug1.Capacity)
+                return null;
             List<JugAction> jugActions = new List<JugAction>();
             while (jug1.FilledCapacity != amount && jug2.FilledCapacity != amount)
             {
@@ -39,6 +43,16 @@ namespace JugMeasure.Core
                 }
             }
             return new MeasureReslut(jugActions);
+        }
+
+        public async Task<MeasureReslut> MeasureAsync(Jug jug1, Jug jug2, Capacity amount)
+        {
+            return await Task.Run(() => Measure(jug1, jug2, amount));
+        }
+
+        public async Task<MeasureReslut> ReverseMeasureAsync(Jug jug1, Jug jug2, Capacity amount)
+        {
+            return await Task.Run(() => ReverseMeasure(jug1, jug2, amount));
         }
     }
 }

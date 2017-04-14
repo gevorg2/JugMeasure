@@ -6,7 +6,7 @@ namespace JugMeasure.Core
 {
     public struct Jug
     {
-        public Jug(ushort capasity, string name) : this(new Capacity(capasity), name)
+        public Jug(uint capasity, string name) : this(new Capacity(capasity), name)
         {
         }
         public Jug(Capacity capasity, string name)

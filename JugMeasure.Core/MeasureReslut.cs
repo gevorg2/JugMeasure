@@ -11,9 +11,5 @@ namespace JugMeasure.Core
         }
 
         public IList<JugAction> Actions { get; set; }
-        public override string ToString()
-        {
-            return String.Join("\n", Actions);
-        }
     }
 }
