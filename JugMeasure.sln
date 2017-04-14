@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JugMeasure", "JugMeasure\JugMeasure.csproj", "{46FABBCA-94FC-4D0B-B30C-8D21A11189B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JugMeasure.Api", "JugMeasure\JugMeasure.Api.csproj", "{46FABBCA-94FC-4D0B-B30C-8D21A11189B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JugMeasure.Core", "JugMeasure.Core\JugMeasure.Core.csproj", "{F35A0DF8-2647-4487-82F8-43339D4B8ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JugMeasure.Core.Test", "JugMeasure.Core.Test\JugMeasure.Core.Test.csproj", "{9E6897DF-DFFF-4ED7-BC16-2457043226C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{46FABBCA-94FC-4D0B-B30C-8D21A11189B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46FABBCA-94FC-4D0B-B30C-8D21A11189B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46FABBCA-94FC-4D0B-B30C-8D21A11189B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35A0DF8-2647-4487-82F8-43339D4B8ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35A0DF8-2647-4487-82F8-43339D4B8ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35A0DF8-2647-4487-82F8-43339D4B8ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35A0DF8-2647-4487-82F8-43339D4B8ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6897DF-DFFF-4ED7-BC16-2457043226C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6897DF-DFFF-4ED7-BC16-2457043226C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6897DF-DFFF-4ED7-BC16-2457043226C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6897DF-DFFF-4ED7-BC16-2457043226C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
